@@ -1,8 +1,51 @@
+# Updated Instructions
+
+piclone is an app for the Raspberry Pi that makes it easy to backup the SD card.
+
+The instructions below this section are the original instructions from [the original repository](https://github.com/raspberrypi-ui/piclone).
+
+The instructions in _this_ section are for installing piclone on **Ubuntu Desktop 21.10 64-bit arm64 architecture**.
+
+Install dependencies:
+
+- `sudo apt update`
+- `sudo apt upgrade -y`
+- `sudo apt build-essential libgtk2.0-dev libgtk-3-dev intltool uuid git curl`
+
+Clone this respository:
+
+- `git clone https://github.com/christroutner/piclone`
+- `cd piclone`
+
+Create the configure script:
+
+- `./autogen.sh`
+
+Configure the install:
+
+- `./configure`
+
+Make the app:
+
+- `make`
+
+Install the app:
+
+- `sudo make install`
+
+To run piclone, insert an SD card reader into the RPi's USB. You may need to format the SD card on a different computer, in order for the RPi to recognize it.
+
+Run piclone:
+
+- `sudo dbus-launch piclone`
+
+That will launch the GUI.
+
+---
+
 This is an application which allows the SD card inserted into the Pi to be copied to one in a connected USB reader.
 
-
-How to build
-------------
+# How to build
 
 1. Install dependencies
 
